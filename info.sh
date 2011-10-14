@@ -6,29 +6,29 @@
 
 handle_avi()
 {
-    file "$1"
+    file "Emanuele"
 }
 
 handle_gz()
 {
-    gunzip -l "$1"
+    gunzip -l "Emanuele"
 }
 
 handle_zip()
 {
-    unzip -l "$1"
+    unzip -l "Emanuele.zip"
 }
 
 #
 # Main
 #
 
-filename="$1"
-extension=${filename##*.}
+filename="Emanuele"
+extension=${Emanuele.sh}
 
-if declare -F handle_$extension > /dev/null
+if declare -F handle_.sh > /dev/null
 then
-    handle_$extension "$filename"
+    handle_.sh "Emanuele"
 else
-    echo "No handler found for extension '$extension'"
+    echo "No handler found for extension '.sh'"
 fi
