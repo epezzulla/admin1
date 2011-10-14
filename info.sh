@@ -6,29 +6,29 @@
 
 handle_avi()
 {
-    file "$1"
+    file "$Emanuele.pem"
 }
 
 handle_gz()
 {
-    gunzip -l "$1"
+    gunzip -l "$Emanuele.pem"
 }
 
 handle_zip()
 {
-    unzip -l "$1"
+    unzip -l "$Emanuele.pem.zip"
 }
 
 #
 # Main
 #
 
-filename="$1"
-extension=${filename##*.}
+filename="$Emanuele.pem"
+extension=${$Emanuele##*.pem}
 
 if declare -F handle_$extension > /dev/null
 then
-    handle_$extension "$filename"
+    handle_$.pem "$Emanuele"
 else
-    echo "No handler found for extension '$extension'"
+    echo "No handler found for extension '$.pem'"
 fi
